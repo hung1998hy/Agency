@@ -1,0 +1,104 @@
+/* ====================== 2, Header ====================== */
+
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    padding: 1.5rem 0;
+    z-index: 1000;
+    transition: 0.5s;
+    &.section {
+        background-color: #212529;
+        transition: 0.5s;
+        padding: 15.5px 0;
+    }
+    @include max-breakpoint(991.999) {
+        background-color: #212529;
+        padding: 15.5px 0;
+    }
+    &__bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        flex-wrap: wrap;
+        &-logo {
+            color: #fed136;
+            display: inline-block;
+            margin-right: 1rem;
+            img {
+                height: 2rem;
+                width: auto;
+                transition: 0.5s;
+                &.logo__img {
+                    height: 24px;
+                    width: auto;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &-button {
+            padding: 12px;
+            font-size: 0.75rem;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #fed136;
+            border: 0;
+            line-height: 1;
+            border-radius: 0.25rem;
+            display: none;
+            @include max-breakpoint(991.99) {
+                display: block;
+            }
+            i {
+                margin-left: 10px;
+            }
+        }
+        &-menu {
+            margin-left: auto;
+            padding-left: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #fff;
+            font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            @include max-breakpoint(991.99) {
+                text-align: left;
+                align-items: flex-start;
+                flex-basis: 100%;
+                max-height: 0vh;
+                overflow: hidden;
+                background-color: #212529;
+                width: 100%;
+                flex-direction: column;
+                transition: all ease-in-out 0.5s;
+            }
+            &.active {
+                max-height: 100vh;
+            }
+            .bar-menu__item {
+                padding: 0.5rem 1rem;
+                &:hover a {
+                    color: #fed136;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                .menu__item-link {
+                    color: white;
+                    font-size: 15.2px;
+                    letter-spacing: 1;
+                    &.showColor {
+                        color: #fed136;
+                    }
+                }
+                @include max-breakpoint(991.99) {
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}

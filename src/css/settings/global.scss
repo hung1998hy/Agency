@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul,
+li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.hidden-scroll-y {
+    overflow-y: hidden;
+}
